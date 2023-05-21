@@ -1,6 +1,7 @@
 # TrelloClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+This project use plugin https://github.com/tailwindlabs/tailwindcss-forms
 
 ## Development server
 
