@@ -23,7 +23,9 @@
     </header>
     <div class="bg-white rounded shadow-none sm:shadow-lg py-4 px-6 md:px-10">
       <div class="mb-4">
-        <h1 class="text-center font-semibold pt-4 pb-8 text-gray-600">Log In to Trello</h1>
+        <h1 class="text-center font-semibold pt-4 pb-8 text-gray-600">
+          Log In to Trello
+        </h1>
         <form novalidate class="space-y-4">
           <div class="relative">
             <input
@@ -40,41 +42,59 @@
             />
           </div>
           <div>
-            <button
-              type="submit"
-              class="text-white w-full px-5 py-2 font-medium rounded text-sm bg-green-700"
-            >
-              Log In
-            </button>
+            <app-button [buttonType]="'submit'">Log In</app-button>
           </div>
         </form>
       </div>
       <div class="mb-4 text-center space-y-4">
         <div class="">Or</div>
         <div>
-          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100"><i class="fa-brands fa-google pr-2 max-sm:hidden"></i>Continue with Google</button>
+          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100">
+            <i class="fa-brands fa-google pr-2 max-sm:hidden"></i>Continue with
+            Google
+          </button>
         </div>
         <div class="">
-          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100"><i class="fa-brands fa-microsoft pr-2 max-sm:hidden"></i>Continue to Microsoft</button>
+          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100">
+            <i class="fa-brands fa-microsoft pr-2 max-sm:hidden"></i>Continue to
+            Microsoft
+          </button>
         </div>
         <div class="">
-          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100"><i class="fa-brands fa-apple fa-lg pr-2 max-sm:hidden"></i>Continue to Apple</button>
+          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100">
+            <i class="fa-brands fa-apple fa-lg pr-2 max-sm:hidden"></i>Continue
+            to Apple
+          </button>
         </div>
         <div class="">
-          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100"><i class="fa-brands fa-slack pr-2 max-sm:hidden"></i>Continue to Slack</button>
+          <button class="w-full py-2 rounded border-2 shadow hover:bg-gray-100">
+            <i class="fa-brands fa-slack pr-2 max-sm:hidden"></i>Continue to
+            Slack
+          </button>
         </div>
       </div>
 
-      <hr class="my-4 border-b-1 border-r-gray-300">
+      <hr class="my-4 border-b-1 border-r-gray-300" />
 
-      <section class="flex justify-center items-center space-x-0 space-y-2 md:space-x-2 md:space-y-0 gap-">
-        <a routerLink="/forgot-password" class="text-blue-600 font-light">Cant't log in?</a>
+      <section
+        class="flex justify-center items-center space-x-0 space-y-2 md:space-x-2 md:space-y-0 gap-"
+      >
+        <a routerLink="/forgot-password" class="text-blue-600 font-light"
+          >Cant't log in?</a
+        >
         <span class="text-gray-500 hidden md:block">*</span>
-        <a routerLink="/register" class="text-blue-600 font-light">Sing up for an account</a>
+        <a routerLink="/register" class="text-blue-600 font-light"
+          >Sing up for an account</a
+        >
       </section>
     </div>
     <footer class="pt-6 pb-6 flex justify-center">
-      <img loading="lazy" class="w-32 mt-4" src="/assets/images/logo/horizontal-logo-gradient-blue-atlassian.svg" alt="logo">
+      <img
+        loading="lazy"
+        class="w-32 mt-4"
+        src="/assets/images/logo/horizontal-logo-gradient-blue-atlassian.svg"
+        alt="logo"
+      />
     </footer>
   </div>
 </div>
