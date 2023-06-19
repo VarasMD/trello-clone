@@ -1,6 +1,7 @@
 <button
   [type]="buttonType"
-  class="text-white w-full px-5 py-2 font-medium rounded text-sm bg-green-700 hover:bg-success-800"
+  class="text-white w-full px-5 py-2 font-medium rounded text-sm"
+  [ngClass]="colors"
 >
   <ng-content></ng-content>
 </button>
