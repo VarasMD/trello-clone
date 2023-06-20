@@ -18,27 +18,35 @@
             <a class="block py-3 px-4 text-white">Recent</a>
           </li>
           <li>
-            <app-button typeBtn="button" color="sky">Create</app-button>
+            <app-button typeBtn="button" color="primary">Create</app-button>
           </li>
         </ul>
       </div>
     </div>
     <div class="flex items-center">
-      <button
-        type="button"
-        class="flex rounded-full"
-        aria-expanded="false"
-        type="button"
-        (click)="isOpen = !isOpen"
-        cdkOverlayOrigin
-        #menuOverlay="cdkOverlayOrigin"
-      >
-        <img
-          class="w-8 h-8 rounded-full"
-          src="https://api.lorem.space/image/face?w=400&h=400"
-          alt="user photo"
-        />
-      </button>
+      <div class="flex space-x-2">
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faBell"></fa-icon>
+        </button>
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faInfoCircle"></fa-icon>
+        </button>
+        <button
+          type="button"
+          class="flex rounded-full"
+          aria-expanded="false"
+          type="button"
+          (click)="isOpen = !isOpen"
+          cdkOverlayOrigin
+          #menuOverlay="cdkOverlayOrigin"
+        >
+          <img
+            class="w-8 h-8 rounded-full"
+            src="/assets/images/svg/señor x.png"
+            alt="user photo"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </nav>
@@ -60,7 +68,7 @@
     <div class="py-3 px-4 flex items-center space-x-4">
       <img
         class="w-10 h-10 rounded-full"
-        src="https://api.lorem.space/image/face?w=400&h=400"
+        src="/assets/images/svg/señor x.png"
         alt=""
       />
       <div class="space-y-1">
