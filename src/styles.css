@@ -4,3 +4,27 @@
 @import 'tailwindcss/utilities';
 
 @import '@angular/cdk/overlay-prebuilt.css';
+
+/* Estilos para el scrollbar horizontal */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #555;
+}
