@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Column, Todo } from 'src/app/models/todo.model';
 
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -20,6 +22,11 @@ import { Column, Todo } from 'src/app/models/todo.model';
   ],
 })
 export class BoardComponent {
+  selectedColumnIndex: number | null = null;
+  newTaskDescription: string = '';
+
+  faPlus = faPlus;
+
   toDos: Todo[] = [
     {
       id: '1',
@@ -64,6 +71,11 @@ export class BoardComponent {
     }
   ]
 
+  dropColumn(event: CdkDragDrop<Column[]>): void {
+    console.log(event);
+    moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
+  }
+
   drop(event: CdkDragDrop<Todo[]>): void {
     if(event.previousContainer.data === event.container.data){
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -77,5 +89,20 @@ export class BoardComponent {
       title: "new column",
       toDos: []
     })
+  }
+
+  addTask(columnIndex: number) {
+    console.log(columnIndex);
+    if (this.newTaskDescription.trim() !== '') {
+      const newTask = {
+        id: String(this.columns[columnIndex].toDos.length + 1),
+        title: this.newTaskDescription
+      };
+      console.log(this.columns);
+      this.columns[columnIndex].toDos.push(newTask);
+
+      this.newTaskDescription = '';
+      this.selectedColumnIndex = null;
+    }
   }
 }

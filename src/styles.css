@@ -5,7 +5,7 @@
 
 @import '@angular/cdk/overlay-prebuilt.css';
 
-/* Estilos para el scrollbar horizontal */
+/* Style to scrollbar horizontal */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
