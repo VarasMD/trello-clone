@@ -12,6 +12,7 @@ module.exports = {
         primary: colors.blue,
         danger: colors.red,
         secondary: colors.gray,
+        grayLight: colors.gray
       },
       container: {
         screen: {
