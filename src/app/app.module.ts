@@ -14,9 +14,9 @@ import { BoardsComponent } from './pages/boards/boards.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BoardComponent } from './pages/board/board.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.component';
-import { TableComponent } from './components/table/table.component';
+import { TableComponent } from './pages/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -40,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     DialogModule,
     HttpClientModule,
-    CdkTableModule
+    CdkTableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
